@@ -10,5 +10,117 @@ font-family: 'Lexend Deca', sans-serif; */
     --lightGray: hsl(0, 0%, 95%);
 }
 body{
-    font-size: 15px;
+    font-size: 18px;
+    background-color: var(--lightGray);
+    padding: 6% 3%;    
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.col{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex:1;
+}
+.card{
+    border-radius: 8px;
+    width: 70%;
+    margin: auto;
+    background-color: red;
+}
+.icard:nth-child(1){
+    background-color: var(--brightOrange);
+    border-radius: 8px 0 0 8px;
+}
+.icard:nth-child(2){
+    background-color: var(--darkCyan);
+}
+.icard:nth-child(3){
+    background-color: var(--veryDarkCyan);
+    border-radius: 0 8px 8px 0;
+}
+
+.icard{
+    height: 350px;
+    justify-content: space-around;
+    padding: 3rem;
+    min-width: 100px;
+    
+}
+.icard>.title{
+    color: var(--lightGray);
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+.icard>.paragraph{
+    color: var(--paragraphs);
+    font-family: 'Lexend Deca', sans-serif; 
+    font-size: small;
+    margin-bottom: 30%;
+    line-height: 20px;
+}
+
+.icard>.btn{
+    background-color: var(--lightGray);
+    font-family: 'Big Shoulders Display', cursive;
+    border-radius: 25px;
+    border: solid 2px var(--lightGray);
+    width: 80%;
+    height: 12%;
+}
+.icard:nth-child(1)>.btn{
+    color: var(--brightOrange);
+}
+.icard:nth-child(2)>.btn{
+    color: var(--darkCyan);
+}
+.icard:nth-child(3)>.btn{
+    color: var(--veryDarkCyan);
+}
+.icard>.btn:hover{
+    background-color: transparent;
+    color: var(--lightGray);
+  
+}
+.attribution{
+    margin-top: 2rem;
+    text-align: center;
+}
+@media only screen and (max-width:900px) {
+    .icard>.paragraph{
+         margin-bottom: 10px;
+    }
+    
+    .icard:nth-child(1){
+       
+        border-radius: 8px 0 0 0;
+    }
+    .icard:nth-child(2){
+        border-radius: 0 8px 0 0 ;
+    }
+    .icard:nth-child(3){
+        
+        border-radius: 0 0px 8px 8px;
+    }
+}
+@media only screen and (max-width:610px) {
+    body{
+      padding: 1%;
+    }
+    .icard:nth-child(1){
+       
+        border-radius: 8px 8px 0 0;
+    }
+    .icard:nth-child(2){
+        border-radius: 0 0 0 0 ;
+    }
+    .icard:nth-child(3){
+        
+        border-radius: 0 0 8px 8px;
+    }
 }
